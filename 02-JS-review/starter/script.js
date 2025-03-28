@@ -203,3 +203,10 @@ bookTitils;
 // acc is the inital value which we are initialzing at begining and it will keep on adding on each iterations.
 const allPagesCount = book.reduce((acc, book) => acc + book.pages, 0);
 allPagesCount;
+
+//sort : here it will sort the array but it will change the original array which will be sorted
+//   so we have slice it so that it will give new array and wont affect the original array.
+const arr = [3, 6, 3, 6, 5, 9];
+sortArr = arr.slice().sort((a, b) => a - b);
+console.log(sortArr);
+arr;
