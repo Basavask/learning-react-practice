@@ -210,3 +210,22 @@ const arr = [3, 6, 3, 6, 5, 9];
 sortArr = arr.slice().sort((a, b) => a - b);
 console.log(sortArr);
 arr;
+
+//immutable array fn
+
+// adding a array
+
+const addBook = [...book, { pages: 100, author: "me", title: "now or never" }];
+addBook;
+
+// deleting array
+
+const deleteBook = addBook.filter((book) => book.pages !== 100);
+deleteBook;
+
+// update a array
+const updateArray = deleteBook.map((book) =>
+  book?.id === 1 ? { ...book, pages: 1000000 } : book
+);
+
+updateArray;
